@@ -9,3 +9,4 @@ RUN apt-get update && apt-get -y upgrade && apt -y install nginx && apt-get clea
     sed -i 's/user www-data/user Roman/g' /etc/nginx/nginx.conf
 ADD index.html /var/www/rolagg.com/
 ADD img.jpg /var/www/rolagg.com/img/
+CMD ["nginx", "-g", "daemon off;"]
