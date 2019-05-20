@@ -5,7 +5,8 @@ RUN apk add curl && \
     rm -rf /sbin/* && \
     rm -rf /usr/sbin/*
 
-ADD irc_log.txt /home/suzen/irc_log.txt
+ADD irc_log.txt /home/suzen/
+ADD diary.txt /home/suzen/
 ADD hello /bin
 
 ENTRYPOINT ["/bin/hello"]
