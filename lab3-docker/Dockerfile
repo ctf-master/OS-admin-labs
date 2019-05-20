@@ -6,6 +6,6 @@ RUN apt-get update && apt-get -y upgrade && apt -y install nginx && apt-get clea
     useradd Roman && groupadd Galitsyn && usermod -aG Galitsyn Roman && \
     chown -R Roman:Galitsyn /var/www/rolagg.com/ && \
     sed -i 's/\/var\/www\/html/\/var\/www\/rolagg.com/g' /etc/nginx/sites-enabled/default && \
-    sed -i 's/user  nginx/user  Roman/g' /etc/nginx/nginx.conf
+    sed -i 's/user www-data/user Roman/g' /etc/nginx/nginx.conf
 ADD index.html /var/www/rolagg.com/
 ADD img.jpg /var/www/rolagg.com/img/
